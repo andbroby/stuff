@@ -25,8 +25,8 @@ public final class Taxi {
             int j = groups.size() - 1;
             Integer group = groups.get(i);
 
-            while (group <= 4 && i < j && (group + groups.get(j)) <= 4) {
-                group += groups.get(j);
+            while (group < 4 && i < j && (group + groups.get(j)) <= 4) {
+              group += groups.get(j);
                 groups.remove(j);
                 j--;
             }
